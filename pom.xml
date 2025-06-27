@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
@@ -36,7 +36,7 @@
   <build>
     <finalName>java-web-app</finalName>
     <plugins>
-      <!-- WAR packaging plugin -->
+      <!-- WAR packaging -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
@@ -46,7 +46,7 @@
         </configuration>
       </plugin>
 
-      <!-- Java compiler plugin -->
+      <!-- Java Compiler -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -57,7 +57,7 @@
         </configuration>
       </plugin>
 
-      <!-- SonarQube analysis plugin -->
+      <!-- SonarQube Plugin -->
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
@@ -69,11 +69,11 @@
   <distributionManagement>
     <snapshotRepository>
       <id>nexus</id>
-      <url>http://192.168.1.109:8081/repository/maven-snapshots/</url>
+      <url>http://192.168.106.202:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>nexus</id>
-      <url>http://http://192.168.1.109:8081/repository/maven-releases/</url>
+      <url>http://192.168.106.202:8081/repository/maven-releases/</url>
     </repository>
   </distributionManagement>
 
