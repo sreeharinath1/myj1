@@ -10,6 +10,9 @@
   <version>1.0.0</version>
   <packaging>war</packaging>
 
+  <name>Java Web App</name>
+  <description>Demo web app project with Maven, Nexus, Tomcat, and SonarQube integration</description>
+
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
@@ -31,12 +34,20 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+
+    <!-- Optional: JUnit for basic test scaffolding -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
     <finalName>java-web-app</finalName>
     <plugins>
-      <!-- WAR packaging -->
+      <!-- WAR plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
@@ -46,7 +57,7 @@
         </configuration>
       </plugin>
 
-      <!-- Java Compiler -->
+      <!-- Java compiler plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -57,7 +68,7 @@
         </configuration>
       </plugin>
 
-      <!-- SonarQube Plugin -->
+      <!-- SonarQube plugin -->
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
